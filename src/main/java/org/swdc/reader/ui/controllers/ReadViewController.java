@@ -1,10 +1,7 @@
 package org.swdc.reader.ui.controllers;
 
-import de.felixroske.jfxsupport.FXMLController;
-import de.felixroske.jfxsupport.GUIState;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.value.ObservableBooleanValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -14,7 +11,6 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.util.Duration;
-import lombok.Getter;
 import org.controlsfx.control.Notifications;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -32,12 +28,13 @@ import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.views.ReadView;
 import org.swdc.reader.ui.views.dialog.ContentsItemView;
 import org.swdc.reader.ui.views.dialog.MarkAddDialog;
+import org.xspring.javafx.FXMLController;
+import org.xspring.javafx.GUIState;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executor;
-import java.util.concurrent.FutureTask;
 
 /**
  * Created by lenovo on 2019/5/31.

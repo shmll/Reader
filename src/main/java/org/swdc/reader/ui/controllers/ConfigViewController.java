@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.controllers;
 
-import de.felixroske.jfxsupport.FXMLController;
-import de.felixroske.jfxsupport.GUIState;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -16,6 +14,8 @@ import org.swdc.reader.event.RestartEvent;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.utils.DataUtil;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.FXMLController;
+import org.xspring.javafx.GUIState;
 
 import java.net.URL;
 import java.util.List;

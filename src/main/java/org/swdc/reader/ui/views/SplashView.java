@@ -1,11 +1,12 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.SplashScreen;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.springframework.core.io.ClassPathResource;
+import org.xspring.javafx.ModulePathResource;
+import org.xspring.javafx.SplashScreen;
 
 import java.io.IOException;
 
@@ -22,7 +23,7 @@ public class SplashView extends SplashScreen {
 
     @Override
     public Parent getParent() {
-        ClassPathResource resource = new ClassPathResource(getImagePath());
+        ModulePathResource resource = new ModulePathResource(getClass().getModule(),getImagePath());
         try {
             Image image = new Image(resource.getInputStream());
             Group gp = new Group();

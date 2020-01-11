@@ -1,7 +1,5 @@
 package org.swdc.reader;
 
-import de.felixroske.jfxsupport.AbstractJavaFxApplicationSupport;
-import de.felixroske.jfxsupport.GUIState;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 import lombok.extern.apachecommons.CommonsLog;
@@ -14,6 +12,8 @@ import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.ui.views.ReaderView;
 import org.swdc.reader.ui.views.SplashView;
+import org.xspring.javafx.GUIState;
+import org.xspring.javafx.SpringFXApplication;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -21,7 +21,7 @@ import java.net.MalformedURLException;
 @EnableAsync
 @CommonsLog
 @SpringBootApplication
-public class FReaderApplication extends AbstractJavaFxApplicationSupport {
+public class FReaderApplication extends SpringFXApplication {
 
 	public static void main(String[] args) {
 		launch(FReaderApplication.class, ReaderView.class,new SplashView(), args);

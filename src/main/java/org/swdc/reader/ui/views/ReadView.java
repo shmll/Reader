@@ -1,11 +1,11 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.scene.layout.BorderPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 

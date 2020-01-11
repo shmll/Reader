@@ -1,6 +1,5 @@
 package org.swdc.reader.ui.controllers.dialog;
 
-import de.felixroske.jfxsupport.FXMLController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -10,6 +9,7 @@ import org.swdc.reader.services.BookService;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.views.dialog.TypeAddDialog;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.FXMLController;
 
 import java.net.URL;
 import java.util.ResourceBundle;

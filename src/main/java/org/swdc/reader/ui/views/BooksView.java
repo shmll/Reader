@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -17,6 +15,8 @@ import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.ui.cells.BookGridCell;
 import org.swdc.reader.ui.cells.TypeCell;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 import java.util.List;

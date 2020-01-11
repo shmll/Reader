@@ -1,29 +1,22 @@
 package org.swdc.reader.utils;
 
-import de.felixroske.jfxsupport.GUIState;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.ComboBox;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.Priority;
 import org.controlsfx.control.PropertySheet;
 import org.controlsfx.property.editor.PropertyEditor;
 import org.springframework.core.io.ClassPathResource;
 import org.swdc.reader.anno.ConfigProp;
 import org.swdc.reader.core.ConfigProperty;
 import org.swdc.reader.ui.ApplicationConfig;
-import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.ui.views.PropertyEditors;
+import org.xspring.javafx.GUIState;
+import org.xspring.javafx.ModulePathResource;
 
 import java.beans.PropertyDescriptor;
-import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Optional;
 
@@ -40,7 +33,7 @@ public class UIUtils {
      */
     public static void configUI(Pane pane, ApplicationConfig config) throws Exception {
         if(config.getTheme().equals("")||config.getTheme().equals("default")){
-            pane.getStylesheets().add(new ClassPathResource("style/default.css").getURL().toExternalForm());
+            pane.getStylesheets().add("file:configs/theme/default/default.css");
         }else{
             pane.getStylesheets().add("file:configs/theme/"+config.getTheme()+"/"+config.getTheme()+".css");
         }

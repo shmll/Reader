@@ -1,6 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.GUIState;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
@@ -18,6 +17,7 @@ import org.swdc.reader.core.ConfigProperty;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.GUIState;
 
 import java.io.File;
 import java.io.IOException;

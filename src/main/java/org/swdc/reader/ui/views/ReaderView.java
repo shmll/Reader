@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -14,6 +12,8 @@ import org.swdc.reader.event.ViewChangeEvent;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import static org.swdc.reader.utils.UIUtils.findById;
 

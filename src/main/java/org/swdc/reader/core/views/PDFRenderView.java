@@ -1,16 +1,14 @@
 package org.swdc.reader.core.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.application.Platform;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import lombok.Getter;
 import org.swdc.reader.core.BookView;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 

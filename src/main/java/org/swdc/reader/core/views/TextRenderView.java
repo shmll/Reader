@@ -3,17 +3,14 @@ package org.swdc.reader.core.views;
 import com.teamdev.jxbrowser.chromium.Browser;
 import com.teamdev.jxbrowser.chromium.BrowserContext;
 import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
-import javafx.scene.web.WebView;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.swdc.reader.core.BookView;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 

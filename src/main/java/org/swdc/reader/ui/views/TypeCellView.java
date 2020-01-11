@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,6 +12,8 @@ import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.ui.views.dialog.TypeEditViewDialog;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 

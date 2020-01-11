@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -16,6 +14,8 @@ import org.swdc.reader.core.configs.PDFConfig;
 import org.swdc.reader.core.configs.TextConfig;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 import java.io.Reader;

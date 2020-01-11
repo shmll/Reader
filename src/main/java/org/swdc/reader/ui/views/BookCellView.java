@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.views;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,6 +19,8 @@ import org.swdc.reader.ui.views.dialog.BookEditDialog;
 import org.swdc.reader.ui.views.dialog.ContentsItemView;
 import org.swdc.reader.ui.views.dialog.MarksDialog;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
 
 import javax.annotation.PostConstruct;
 
@@ -29,7 +29,7 @@ import javax.annotation.PostConstruct;
  */
 @Scope("prototype")
 @FXMLView("/views/cells/BookCellView.fxml")
-public class BookCellView extends AbstractFxmlView{
+public class BookCellView extends AbstractFxmlView {
 
     @Autowired
     private ApplicationConfig config;

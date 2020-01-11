@@ -1,8 +1,5 @@
 package org.swdc.reader.ui.views.dialog;
 
-import de.felixroske.jfxsupport.AbstractFxmlView;
-import de.felixroske.jfxsupport.FXMLView;
-import de.felixroske.jfxsupport.GUIState;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -16,6 +13,9 @@ import org.swdc.reader.core.BookReader;
 import org.swdc.reader.ui.ApplicationConfig;
 import org.swdc.reader.ui.AwsomeIconData;
 import org.swdc.reader.utils.UIUtils;
+import org.xspring.javafx.AbstractFxmlView;
+import org.xspring.javafx.FXMLView;
+import org.xspring.javafx.GUIState;
 
 import javax.annotation.PostConstruct;
 

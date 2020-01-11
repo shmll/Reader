@@ -3,9 +3,10 @@ package org.swdc.reader.ui;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import lombok.Getter;
+import org.controlsfx.glyphfont.FontAwesome;
 import org.springframework.core.io.ClassPathResource;
+import org.xspring.javafx.ModulePathResource;
 
-import javax.imageio.ImageIO;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -36,20 +37,21 @@ public class AwsomeIconData {
 
     static {
         try{
-            imageIcons = Arrays.asList(new Image(new ClassPathResource("icon/book16.png").getInputStream()),
-                    new Image(new ClassPathResource("icon/book24.png").getInputStream()),
-                    new Image(new ClassPathResource("icon/book32.png").getInputStream()),
-                    new Image(new ClassPathResource("icon/book48.png").getInputStream()),
-                    new Image(new ClassPathResource("icon/book64.png").getInputStream()),
-                    new Image(new ClassPathResource("icon/book72.png").getInputStream()));
+            Module module = AwsomeIconData.class.getModule();
+            imageIcons = Arrays.asList(new Image(new ModulePathResource(module, "icon/book16.png").getInputStream()),
+                    new Image(new ModulePathResource(module,"icon/book24.png").getInputStream()),
+                    new Image(new ModulePathResource(module,"icon/book32.png").getInputStream()),
+                    new Image(new ModulePathResource(module,"icon/book48.png").getInputStream()),
+                    new Image(new ModulePathResource(module,"icon/book64.png").getInputStream()),
+                    new Image(new ModulePathResource(module,"icon/book72.png").getInputStream()));
             fontIconSmall =  Font
-                    .loadFont(new ClassPathResource("/icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 14);
+                    .loadFont(new ModulePathResource(module,"icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 14);
             fontIcon = Font
-                    .loadFont(new ClassPathResource("/icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 18);
+                    .loadFont(new ModulePathResource(module,"icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 18);
             fontIconLarge = Font
-                    .loadFont(new ClassPathResource("/icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 24);
+                    .loadFont(new ModulePathResource(module,"icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 24);
             fontIconVerySmall = Font
-                    .loadFont(new ClassPathResource("/icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 12);
+                    .loadFont(new ModulePathResource(module,"icon/fontawesome-webfont@4.5.0.ttf").getInputStream(), 12);
             awesomeMap = new HashMap<>();
             awesomeMap.put("fa_500px", '\uf26e');
             awesomeMap.put("adjust", '\uf042');
