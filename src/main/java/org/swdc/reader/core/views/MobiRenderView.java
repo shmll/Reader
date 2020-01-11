@@ -1,13 +1,10 @@
 package org.swdc.reader.core.views;
 
-import com.teamdev.jxbrowser.chromium.Browser;
-import com.teamdev.jxbrowser.chromium.BrowserContext;
-import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
 import javafx.application.Platform;
 import javafx.scene.Node;
 import javafx.scene.layout.HBox;
+import javafx.scene.web.WebView;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.swdc.reader.core.BookView;
 import org.xspring.javafx.FXMLView;
 
@@ -19,10 +16,7 @@ import javax.annotation.PostConstruct;
 @FXMLView
 public class MobiRenderView implements BookView {
 
-    private BrowserView view;
-
-    @Autowired
-    private BrowserContext context;
+    private WebView view;
 
     @Getter
     private final String viewId = "mobiRenderView";
@@ -30,7 +24,7 @@ public class MobiRenderView implements BookView {
     @PostConstruct
     public void initUI() {
         Platform.runLater(() ->{
-            this.view = new BrowserView(new Browser(context));
+            this.view = new WebView();
             this.view.setId(viewId);
         });
     }

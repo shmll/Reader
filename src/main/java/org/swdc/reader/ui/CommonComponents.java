@@ -1,7 +1,5 @@
 package org.swdc.reader.ui;
 
-import com.teamdev.jxbrowser.chromium.BrowserContext;
-import com.teamdev.jxbrowser.chromium.BrowserContextParams;
 import info.monitorenter.cpdetector.io.CodepageDetectorProxy;
 import info.monitorenter.cpdetector.io.JChardetFacade;
 import javafx.scene.text.Font;
@@ -15,7 +13,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
@@ -26,8 +23,6 @@ public class CommonComponents {
 
     @Getter
     private static Map<String, Font> fontMap;
-
-    private static final BrowserContext browserContext = new BrowserContext(new BrowserContextParams("./configs/xRender"));
 
     static {
         fontMap = new LinkedHashMap<>();
@@ -56,11 +51,6 @@ public class CommonComponents {
         CodepageDetectorProxy codepageDetectorProxy = CodepageDetectorProxy.getInstance();
         codepageDetectorProxy.add(JChardetFacade.getInstance());
         return codepageDetectorProxy;
-    }
-
-    @Bean
-    public BrowserContext browserContext() {
-        return browserContext;
     }
 
     @Bean

@@ -25,9 +25,10 @@ module FReader {
     requires pdfbox;
     requires javafx.web;
     requires spring.beans;
-    requires jxbrowser;
     requires cpdetector;
     requires org.aspectj.weaver;
+    requires jdk.jsobject;
+    requires mobi.java;
 
     opens org.swdc.reader to
             spring.core,
@@ -51,11 +52,13 @@ module FReader {
             spring.core;
 
     opens org.swdc.reader.ui.views.dialog to
+            spring.context,
             spring.beans,
             spring.boot,
             spring.core;
 
     opens org.swdc.reader.ui.controllers.dialog to
+            spring.context,
             spring.beans,
             spring.boot,
             javafx.fxml,
@@ -84,6 +87,7 @@ module FReader {
 
     opens org.swdc.reader.aspects to
             spring.core,
+            spring.aop,
             spring.beans;
 
     opens org.swdc.reader.anno to

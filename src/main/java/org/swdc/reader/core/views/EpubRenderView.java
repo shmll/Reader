@@ -1,14 +1,13 @@
 package org.swdc.reader.core.views;
 
-import com.teamdev.jxbrowser.chromium.Browser;
-import com.teamdev.jxbrowser.chromium.BrowserContext;
-import com.teamdev.jxbrowser.chromium.JSValue;
-import com.teamdev.jxbrowser.chromium.events.FinishLoadingEvent;
-import com.teamdev.jxbrowser.chromium.events.LoadAdapter;
-import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
+import netscape.javascript.JSObject;
+
 import javafx.application.Platform;
+import javafx.concurrent.Worker;
 import javafx.scene.Parent;
 import javafx.scene.layout.HBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import lombok.Getter;
 import lombok.extern.apachecommons.CommonsLog;
 import org.jsoup.Jsoup;
@@ -29,13 +28,10 @@ import javax.annotation.PostConstruct;
 @CommonsLog
 public class EpubRenderView extends AbstractFxmlView implements BookView {
 
-    private BrowserView view;
+    private WebView view;
 
     @Autowired
     private ApplicationConfig config;
-
-    @Autowired
-    private BrowserContext context;
 
     @Getter
     private final String viewId = "epubRenderView";
@@ -62,21 +58,15 @@ public class EpubRenderView extends AbstractFxmlView implements BookView {
     protected void initUI() {
         control = new PageControl(config);
         Platform.runLater(() ->{
-            this.view = new BrowserView(new Browser(context));
+            this.view = new WebView();
             this.view.setId(viewId);
-            Browser engine = this.view.getBrowser();
-            engine.addLoadListener(new LoadAdapter() {
-                @Override
-                public void onFinishLoadingFrame(FinishLoadingEvent event) {
-                    if(event.isMainFrame()) {
-                        JSValue jsWindow = engine.executeJavaScriptAndReturnValue("window");
-                        jsWindow.asObject().setProperty("swdc", control);
-                        engine.executeJavaScript("init()");
-                    }
+            WebEngine engine = this.view.getEngine();
+            engine.getLoadWorker().stateProperty().addListener((observableValue, stateOld, stateNew) -> {
+                if (stateNew == Worker.State.SUCCEEDED) {
+                    JSObject wind = (JSObject) engine.executeScript("window");
+                    wind.setMember("swdc", control);
+                    engine.executeScript("init()");
                 }
-            });
-            engine.addConsoleListener(consoleEvent -> {
-                log.info(consoleEvent.getMessage());
             });
         });
     }

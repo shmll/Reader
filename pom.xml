@@ -22,12 +22,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -184,16 +178,6 @@
 			<version>3.1</version>
 			<scope>system</scope>
 			<systemPath>${pom.basedir}/libs/epublib-core-3.1.jar</systemPath>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-api</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-simple</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>kxml2</groupId>
@@ -251,44 +235,6 @@
 			<scope>system</scope>
 			<systemPath>${pom.basedir}/libs/mobi-java.jar</systemPath>
 		</dependency>
-        <dependency>
-            <groupId>jxBrowser</groupId>
-            <artifactId>jxBrowser</artifactId>
-            <scope>system</scope>
-            <version>0.1</version>
-			<systemPath>${pom.basedir}/libs/jxbrowser-6.21-patched.jar</systemPath>
-        </dependency>
-        <!--<dependency>
-            <groupId>jxBrowser-platform</groupId>
-            <artifactId>jxBrowser-platform32</artifactId>
-            <scope>system</scope>
-			<version>0.1</version>
-            <systemPath>${pom.basedir}/libs/jxbrowser-win32-6.21.jar</systemPath>
-        </dependency> -->
-        <dependency>
-            <groupId>jxBrowser-platform</groupId>
-            <artifactId>jxBrowser-platform64</artifactId>
-            <scope>system</scope>
-			<version>0.1</version>
-            <systemPath>${pom.basedir}/libs/jxbrowser-win64-6.21.jar</systemPath>
-        </dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>2.0.0-alpha1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>2.0.0-alpha1</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
 	</dependencies>
 
 	<build>

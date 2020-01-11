@@ -1,7 +1,7 @@
 package org.swdc.reader.core.readers;
 
-import com.teamdev.jxbrowser.chromium.javafx.BrowserView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.web.WebView;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -64,12 +64,12 @@ public class MobiReader implements BookReader<String> {
 
     @Override
     public void renderPage(String pageData, BorderPane view) {
-        BrowserView webView = (BrowserView) view.lookup("#" + this.view.getViewId());
+        WebView webView = (WebView) view.lookup("#" + this.view.getViewId());
         if (webView == null) {
             view.setCenter(this.view.getView());
-            webView = (BrowserView) this.view.getView();
+            webView = (WebView) this.view.getView();
         }
-        webView.getBrowser().loadHTML(pageData);
+        webView.getEngine().loadContent(pageData);
     }
 
 
