@@ -1,12 +1,18 @@
 module FReader {
-    requires spring.boot.autoconfigure;
-    requires spring.boot;
+
     requires java.sql;
     requires net.bytebuddy;
     requires lombok;
     requires com.fasterxml.classmate;
 
     requires spring.core;
+    requires spring.beans;
+    requires spring.context;
+    requires spring.boot.autoconfigure;
+    requires spring.boot;
+    requires spring.tx;
+    requires spring.data.jpa;
+    requires spring.data.commons;
 
     requires javafx.base;
     requires javafx.graphics;
@@ -21,14 +27,17 @@ module FReader {
     requires epublib.core;
     requires org.jsoup;
     requires org.controlsfx.controls;
-    requires spring.context;
     requires pdfbox;
     requires javafx.web;
-    requires spring.beans;
+
     requires cpdetector;
     requires org.aspectj.weaver;
     requires jdk.jsobject;
     requires mobi.java;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
+    requires jmimemagic;
+    requires org.apache.commons.io;
 
     opens org.swdc.reader to
             spring.core,
@@ -128,4 +137,5 @@ module FReader {
     opens icon to fx.spring.boot.starter;
     opens images to fx.spring.boot.starter;
     opens style to fx.spring.boot.starter;
+
 }
