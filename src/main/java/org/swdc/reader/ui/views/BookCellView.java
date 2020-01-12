@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.swdc.reader.entity.Book;
@@ -43,6 +44,7 @@ public class BookCellView extends AbstractFxmlView {
     @Autowired
     private MarksDialog marksDialog;
 
+    @Getter
     protected Book book;
 
     @PostConstruct

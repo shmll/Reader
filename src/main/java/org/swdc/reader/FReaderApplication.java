@@ -43,12 +43,6 @@ public class FReaderApplication extends SpringFXApplication {
 				}
 			}
 		});
-		stage.setOnCloseRequest(event -> {
-			stage.hide();
-			ctx.stop();
-			ctx.close();
-			System.exit(0);
-		});
 	}
 
 	@EventListener(RestartEvent.class)

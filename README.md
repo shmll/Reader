@@ -12,7 +12,7 @@ include RSS （Feeds），based javaFX and SpringBoot
 
 ## 如何Build How to build it
 
-别的没啥，启动需要加这个参数。
+别的没啥，启动需要加这个jvm参数。
 
 ```
 --add-opens=javafx.controls/javafx.scene.control.skin=org.controlsfx.controls

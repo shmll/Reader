@@ -1,7 +1,5 @@
 package org.swdc.reader.ui.cells;
 
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderPane;
 import org.controlsfx.control.GridCell;
 import org.swdc.reader.entity.Book;
 import org.swdc.reader.ui.views.BookCellView;
@@ -24,7 +22,7 @@ public class BookGridCell extends GridCell<Book> {
             setGraphic(null);
             return;
         }
-        view.setBook(item);
         setGraphic(view.getView());
+        view.setBook(item);
     }
 }

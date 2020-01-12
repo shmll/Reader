@@ -118,6 +118,10 @@ module FReader {
             spring.core,
             spring.beans;
 
+    opens org.swdc.reader.ui.cells to
+            spring.core,
+            spring.beans;
+
     opens views to fx.spring.boot.starter;
     opens views.cells to fx.spring.boot.starter;
     opens views.dialogs to fx.spring.boot.starter;
